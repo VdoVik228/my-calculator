@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #333339;
+            color: #000000;
+        }
+        .navbar-dark {
+            background-color: #1c1c41;
+        }
+        .hi
+        {
+color: #f2f2ed;
+        }
+        .calculator {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .calculator input {
+            width: px;
+            height: px;
+            margin-bottom: 10px;
+        }
+        .calculator button {
+            width: px;
+            height: px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Probability Calculator</a>
+    </nav>
+
+    <div class="container">
+        <div class="calculator">
+            <div class=".hi" >
+            <h2>Probability Calculator</h2>
+        </div>
+            <center>
+            <title>Калькулятор для расчета вероятностей событий</title>
+		<link rel="stylesheet" type="text/css">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<style type="text/css">
+		A  {text-decoration : none;}
+		A:Hover  {text-decoration: none; color : #0000FF;}
+		td {
+			text-align: center;
+			vertical-align: middle;
+		}
+		table {
+			margin: 0px;
+		}
+		.numButton {
+			color: #0000FF;
+			background-color: #f2f2ed;
+			font: normal 85% Arial, sans-serif; 
+			text-decoration: none
+		}
+		.selectButton {
+			color: #FFFF00;
+			background-color: #8E7771;
+			font: normal 85% Arial, sans-serif;
+		}
+		.selectButton2 {
+			color: #FFFF00;
+			background-color: #102190;
+			font: normal 85% Arial, sans-serif;
+		}
+		.selectButton3 {
+			color: #FFFF00;
+			background-color: #631D5B;
+			font: normal 85% Arial, sans-serif;
+			text-decoration: none
+		}
+		.funcButton {
+			color: #CC33CC;
+			font: normal 85% Arial, sans-serif; 
+			text-decoration: none
+		}
+		.commandButton {
+			color: #FF0000;
+			background-color: #f2f2ed; 
+			font-family: normal 80% "Times New Roman", Times, serif
+		}
+		.comment {
+			background-color: #f2f2ed; 
+			font: normal 90% Arial, sans-serif;
+		}
+		.trigButton {
+			font: normal 85% Arial, sans-serif; 
+			text-decoration: none
+		}
+		.main2 {
+			font: normal 80% Arial, sans-serif; 
+		}
+		.clearButton {
+			color: #FF0000;
+			font-family: Arial, Helvetica, sans-serif;
+			font: normal 90% Arial, sans-serif; 
+			text-decoration: none;
+			background-color:#e2e2e2
+		}
+		.helpButton {
+			color: #0000A0;
+			font: normal 100% Arial, sans-serif;
+		}
+		.style1 {
+			color: #FFFFFF;
+		}
+		
+		select{
+			color: #000000;
+			font-family: Arial, Helvetica, sans-serif;
+			font-size:11px;
+		}
+		</style>
+		
+		<script language="JavaScript">
+		<!-- Begin
+		function blockError(){return true;}
+		window.onerror = blockError;
+		
+		var pi=Math.PI;
+		var e=Math.E;
+		
+		function PI(){
+			calculator.input.value += 'pi';
+		}
+		
+		function E(){
+			calculator.input.value += 'e';
+		}
+		
+		function plus(){
+			calculator.input.value += '+';
+		}
+		
+		function minus(){
+			calculator.input.value += '-';
+		}
+		
+		function mult(){
+			calculator.input.value += '*';
+		}
+		
+		function div(){
+			calculator.input.value += '/';
+		}
+		
+		function point(){
+			calculator.input.value += '.';
+		}
+		
+		function leftbracket(){
+			calculator.input.value += '(';
+		}
+		
+		function rightbracket(){
+			calculator.input.value += ')';
+		}
+		
+		function num(x){
+			calculator.input.value += x;
+		}
+		
+		function plus_minus(){
+			calculator.input.value *= -1;
+		}
+		
+		function pow(base,expon){
+			return Math.pow(base,expon);
+		}
+		
+		function factorialOfNum(){
+			var input1 = calculator.input.value;
+			var input2 = eval(input1);
+			if ((parseInt(input2) != input2) || (input2 < 0)){
+				alert("Введите целое положительное число");
+			}
+			else{
+				calculator.input.value=factorial(input2);
+				calculator.myhelp.value = input1 + '! = ' + factorial(input2);
+				scrollResults(input1);
+				return true
+			}
+		}
+		
+		function factorial(n){
+			if ((parseInt(n) != n) || (n < 0)){
+				alert("Введите целое положительное число");
+			}
+			if ((n == 0) || (n == 1)){
+				return 1;
+			}
+			else{
+				var result = n * factorial(n-1);
+				return result;
+			}
+		}
+		
+		function aaa(x){
+			var del = 0.01;
+			if ( x < 0 ) {
+				return del;
+			}
+			else{
+				var result = Math.exp(-x*x)*del + aaa(x-del);
+				return result;
+			}
+		
+		}
+		
+		function ln(arg){
+			return Math.log(arg);
+		}
+		
+		function lg(arg){
+			return Math.log(arg) / Math.log(10);
+		}
+		
+		function sin(arg){
+			if (calculator.input1[0].checked){
+				return Math.sin(arg * Math.PI / 180);
+			}
+			else{
+				return Math.sin(arg);
+			}
+		}
+		
+		function cos(arg){
+			if (calculator.input1[0].checked){
+				return Math.cos(arg * Math.PI / 180);
+			}
+			else{
+				return Math.cos(arg);
+			}
+		}
+		
+		function tg(arg){
+			if (calculator.input1[0].checked){
+				return Math.tan(arg * Math.PI / 180);
+			}
+			else{
+				return Math.tan(arg);
+			}
+		}
+		
+		function arcsin(arg){
+			if (calculator.input1[0].checked){
+				return eval(Math.asin(arg)  * 180 / Math.PI);
+			}
+			else{
+				return Math.asin(arg);
+			}
+		}
+		
+		function arccos(arg){
+			if (calculator.input1[0].checked){
+				return eval(Math.acos(arg) * 180 / Math.PI);
+			}
+			else{
+				return Math.acos(arg);
+			}
+		}
+		
+		function arctg(arg){
+			if (calculator.input1[0].checked){
+				return eval(Math.atan(arg) * 180 / Math.PI);
+			}
+			else{
+				return Math.atan(arg);
+			}
+		}
+		
+		function erfc(arg){
+			var delta = eval((5-arg)/100000);
+			var intSumma = 0;
+			if (arg > 4.999){
+				return 0;
+			}
+			else{
+				for (i=arg;i<=5;i+=delta)
+				{
+					var val1 = -Math.pow(i+delta,2);
+					intSumma += eval((Math.exp(-i*i) + Math.exp(val1))*delta/2);
+				}
+				intSumma *= 2/Math.sqrt(Math.PI);
+				intSumma = eval(intSumma);
+				return intSumma;
+			}
+		}
+		
+		function erf(arg){
+				return (1-erfc(arg));
+		}
+		
+		function sqrt(arg){
+			return Math.sqrt(arg);
+		}
+		
+		function c(arg1,arg2){
+			var combin = eval(factorial(arg1)/(factorial(arg1-arg2)*factorial(arg2)));
+			return combin;
+		}
+		
+		function a(arg1,arg2){
+			var val = eval(factorial(arg1)/factorial(arg1-arg2));
+			return val;
+		}
+		
+		function pDist(arg1,arg2){
+				var pDistrib = eval(Math.pow(arg1,arg2)*Math.exp(-arg1)/factorial(arg2));
+				return pDistrib;
+		}
+		
+		function cDist(arg1,arg2){
+				var tempor1 = arg2/arg1;
+				tempor1 *= tempor1/2;
+				var tempor2 = eval(Math.sqrt(eval(2*Math.PI))*arg1);
+				var cDistrib = eval(Math.exp(-tempor1)/tempor2);
+				return cDistrib;
+		}
+		
+		function bDist(val1,val2,val3){
+				var bDistrib = eval(c(val3,val2)*Math.pow(val1,val2)*Math.pow((1-val1),(val3-val2)));
+				return bDistrib;
+		}
+		
+		function allDist(val1,val2,val3){
+			if (eval(val3) < eval(val2)){
+				alert("Число успехов не должно превышать числа испытаний");
+				return false
+			}
+			else if (val1>1){
+				alert("Считается хорошим тоном, чтобы вероятность успеха в испытании не превышала 1");
+				return false
+			}
+			else if (val1<0){
+				alert("Вероятность должна быть неотрицательной");
+				return false
+			}
+		
+			var probab0 = eval(bDist(val1,val2,val3));
+			var probab1 = eval(pDist(eval(val1*val3),val2));
+			var tempor0 = roundResult(val1*val3);
+			var tempor1 = roundResult(Math.sqrt(tempor0*(1-val1)));
+			var tempor2 = roundResult(val2 - val1*val3);
+			var probab2 = eval(cDist(tempor1,tempor2));
+			var probSum = 0;
+			var probSum1 = 0;
+			var probSum2 = 0;
+			var lambda = "&lambda;";
+			var sigma = "&sigma; = (<em>n p q</em>)<sup>&frac12;</sup> = ";
+			var ksi = "&xi; = <em>m &#8211; n p</em> = ";
+			var myMessage = "<b>" + "Биномиальное распределение вероятности в " + val3 + " испытаниях:" + "</b>" + "<br>" +
+			"(вероятность успеха в одном испытании " + "&nbsp;" + " p = " + val1 + " )" + "<BR>" + "<BR>";
+			var myMessage1 = "<b>" + "Распределение Пуассона:" + "</b>" + "<br>" + lambda + " = <em>n p</em> = " + tempor0 + "<BR>" + "<BR>";
+			var myMessage2 = "<b>" + "Распределение Гаусса:" + "</b>" + "<br>" + sigma + tempor1 + ", &nbsp;" + ksi + tempor2 + "<BR>" + "<BR>";
+				for (i=0; i<=val2; i++)
+				{
+					var probability = bDist(val1,i,val3)
+						probSum += probability;
+					var probability1 = pDist(eval(val1*val3),i);
+						probSum1 += probability1;
+					tempor2 = eval(i - val1*val3);
+					var probability2 = cDist(tempor1,tempor2);
+						probSum2 += probability2;
+					var mesP = "";
+					var mes3 = "";
+						if (i < 10) {
+							mesP = " P(" + "&nbsp;&nbsp;";
+						}
+						else {
+							mesP = " P(";
+						}
+						if (parseInt(i/3) * 3 == i || (i == val2 && parseInt(val2/3) * 3 != i)){
+							mes3 = "<BR>";
+						}
+						var probabilityF = probability.toFixed(8);
+						var probability1F = probability1.toFixed(8);
+						var probability2F = probability2.toFixed(8);
+						myMessage += mesP + i + ") = " + probabilityF + " ," + "&nbsp;&nbsp;" + mes3;
+						myMessage1 += mesP + i + ") = " + probability1F + " ," + "&nbsp;&nbsp;" + mes3;
+						myMessage2 += mesP + i + ") = " + probability2F + " ," + "&nbsp;&nbsp;" + mes3;
+				}
+			if (val2 == 1){
+				var mes2 = " успеха ";
+			}
+			else{
+				mes2 = " успехов ";
+			}
+			if (val3 == 1){
+				var mes = " испытании ";
+			}
+			else {
+				mes = " испытаниях ";
+			}
+			probSum = eval(probSum);
+			probSum1 = eval(probSum1);
+			probSum2 = eval(probSum2);
+			var probMin = eval(1 - (probSum - probab0));
+			var probMin1 = eval(1 - (probSum1 - probab1));
+			var probMin2 = eval(1 - (probSum2 - probab2));
+			myMessage += "<BR>" + "Вероятность не более " + val2 + mes2 + " = " + probSum + "<BR>" + "Вероятность хотя бы " + val2 + mes2 + " = " + probMin;
+			myMessage1 += "<BR>" + "Вероятность не более " + val2 + mes2 + " = " + probSum1 + "<BR>" + "Вероятность хотя бы " + val2 + mes2 + " = " + probMin1;
+			myMessage2 += "<BR>" + "Вероятность не более " + val2 + mes2 + " = " + probSum2 + "<BR>" + "Вероятность хотя бы " + val2 + mes2 + " = " + probMin2;
+				myMessage3 = myMessage + "<BR>" + "<BR>" + myMessage1 + "<BR>" + "<BR>" + myMessage2;
+				
+				calculator.myhelp.value = "Вероятность " + val2 + mes2 + " в " + val3 + mes + " Бернулли";
+				myMessage3 = myMessage + "<BR>" + "<BR>" + myMessage1 + "<BR>" + "<BR>" + myMessage2;
+				toNewWin(myMessage3,'width=520,height=450');
+				return ("P(" + val2 + "," + val3 + ") = " + probab0);
+		
+		}
+		
+		function roundResult(inValue) {
+		var outValue = eval(inValue) + "";
+		if (outValue.indexOf('.') < 0) { return eval(inValue); } 
+		if (outValue.indexOf('e') > 0 ) { return eval(inValue); } 
+		if (eval(outValue.substring(0, outValue.indexOf('.') + 9)) == 0) 
+		{ return eval(inValue); }
+			var numb = 11;
+			if ( outValue.length - outValue.indexOf('.') > numb) {
+				for (i=outValue.indexOf('.')+1; i< outValue.length-7; i++) {
+					if (outValue.substring(i, i+7) == 9999999) {
+						if (i == outValue.indexOf('.')+1) {
+							outValue = outValue.substring(0, i) - (-1);
+						}
+						else {
+							outValue = outValue.substring(0, i+6) + 9999999999;
+						}
+						return eval(outValue);
+					}
+					else if (outValue.substring(i, i+7) <= 1) {
+						outValue = outValue.substring(0, i) + "";
+						return eval(outValue);
+					}
+				}
+			}
+				return eval(inValue);
+		}
+		
+		function round2(numb,accuracy) {
+			return eval(Math.round(numb*Math.pow(10,accuracy))/Math.pow(10,accuracy))
+		}
+		
+		function Evaluate(){
+			var input1 = calculator.input.value;
+			var input2 = eval(input1);
+			calculator.input.value = roundResult(input2);
+			calculator.myhelp.value = input1 + ' = ' + round2(input2,6);
+			scrollResults(input1);
+			return true
+		}
+		
+		function reciprocalNum(){
+			var input1 = calculator.input.value;
+			if (input1=='?') {
+				return calculator.input.value = 'Обратная величина числа'
+			}
+			var input2 = roundResult(1/eval(input1));
+			calculator.input.value = input2;
+			calculator.myhelp.value = '1/' + round2(input1,5) + ' = ' + round2(input2,5);
+			return true
+		}
+		
+		function square(){
+			var input1 = calculator.input.value;
+			if (input1=='?') {
+				return calculator.input.value = 'Квадрат числа'
+			}
+			var input2 = eval(input1);
+			var val = roundResult(Math.pow(input2,2));
+			calculator.input.value = val;
+			calculator.myhelp.value = round2(input2,5) + '<sup>2</sup>' + ' = ' + round2(val,5);
+			return true
+		}
+		
+		function cube(){
+			var input1 = calculator.input.value;
+			if (input1=='?') {
+				return calculator.input.value = 'Куб числа'
+			}
+			var input2 = eval(input1);
+			var val = roundResult(Math.pow(input2,3));
+			calculator.input.value = val;
+			calculator.myhelp.value = round2(input2,5) + '<sup>3</sup>' + ' = ' + round2(val,5);
+			return true
+		}
+		
+		function roundValue(){
+			var input1 = calculator.input.value;
+			var val = Math.round(eval(input1));
+			calculator.input.value = val;
+			calculator.myhelp.value = 'Округление числа ' + input1 + ' дает ' + val;
+			return true
+		}
+		
+		function sqrtOfNum(){
+			var input1 = calculator.input.value;
+			if (input1=='?') {
+				return calculator.input.value = 'Квадратный корень из числа'
+			}
+			var input2 = eval(input1);
+				var val = roundResult(Math.sqrt(input2));
+				calculator.input.value = val;
+				calculator.myhelp.value = round2(input2,5) + '<sup>1/2</sup> = ' + round2(val,5);
+				return true
+		}
+		
+		function powerOfNum(){
+			var b0 = calculator.input.value;
+			if (b0=='?') {
+				return calculator.input.value = 'Возведение в степень. Введите основание (любое числовое выражение), затем нажмите на эту клавишу и введите показатель степени (число или выражение).'
+			}
+			var p0 = prompt(" Введите показатель степени (число или выражение)","")
+			var b1 = eval(b0);
+			var p1 = eval(p0);
+			var val = roundResult(Math.pow(b1, p1));
+			calculator.input.value = val;
+			calculator.myhelp.value = round2(b1,5) + '<sup>' + round2(p1,5) + '</sup> = ' + round2(val,5);
+			return true
+		}
+		
+		function expFun(){
+			var input1 = calculator.input.value;
+			if (input1=='?') {
+				return calculator.input.value = 'Возведение числа e в степень. Для вычисления сложных выражений используйте формат ввода exp(выражение)'
+			}
+			var input2 = eval(input1);
+			var val = roundResult(Math.exp(input2));
+			calculator.input.value = val;
+			var val2 = round2(input2,6);
+			calculator.myhelp.value = 'e<sup>' + val2 + '</sup> = ' + round2(val,6);
+			return true
+		}
+		
+		function loge(){
+			var input1 = calculator.input.value;
+			if (input1=='?') {
+				return calculator.input.value = 'Вычисление натурального логарифма числа. Для вычисления сложных выражений используйте формат ввода ln(выражение)'
+			}
+			var input2 = eval(input1);
+			var val = roundResult(Math.log(input2));
+			calculator.input.value = val;
+			calculator.myhelp.value = 'ln (' + round2(input1,5) + ') = ' + round2(val,5);
+			return true
+		}
+		
+		function log10b(){
+			var input1 = calculator.input.value;
+			if (input1=='?') {
+				return calculator.input.value = 'Вычисление десятичного логарифма числа. Для вычисления сложных выражений используйте формат ввода lg(выражение)'
+			}
+			var input2 = eval(input1);
+			var val = roundResult(Math.log(input2) / Math.log(10));
+			calculator.input.value = val;
+			calculator.myhelp.value = 'lg (' + round2(input1,5) + ') = ' + round2(val,5);
+			return true
+		}
+		
+		function sinFun(){
+			var input1 = calculator.input.value;
+			if (input1=='?') {
+				return calculator.input.value = 'Тригонометрический синус. Для вычисления сложных выражений используйте формат ввода sin(выражение)'
+			}
+			var input2 = eval(input1);
+				if (calculator.input1[0].checked){
+					val = Math.sin(eval(input2 * Math.PI / 180));
+					calculator.myhelp.value = 'sin (' + round2(input2,5) + '°) = ' + round2(val,5);
+				}
+				else {
+					val = Math.sin(input2);
+					for (k=1; k<10; k++) {
+						var input3 = k*Math.PI/input2;
+						var input4 = Math.abs(parseInt(input3) - input3);
+						if (k==1) {
+								var m = "";
+							}
+							else {
+								m = k;
+							}
+						if (input4 < 1.e-9 && input2 > 0) {
+							calculator.myhelp.value = 'sin ' + m + '&pi;/' + input3 + ' = ' + round2(val,5);
+							break;
+						}
+						else if (input4 < 1.e-9) {
+							calculator.myhelp.value = 'sin (-' + m + '&pi;/' + (-input3) + ') = ' + round2(val,5);
+							break;
+						}
+						else {
+							calculator.myhelp.value = 'sin (' + round2(input2,5) + ' рад) = ' + round2(val,5);
+						}
+					}
+				}
+				calculator.input.value = val;
+				return true
+		}
+		
+		function cosFun(){
+			var input1 = calculator.input.value;
+			if (input1=='?') {
+				return calculator.input.value = 'Тригонометрический косинус. Для вычисления сложных выражений используйте формат ввода cos(выражение)'
+			}
+			var input2 = eval(input1);
+			if (calculator.input1[0].checked){
+				val = Math.cos(eval(input2 * Math.PI / 180));
+				calculator.myhelp.value = 'cos (' + round2(input2,5) + '°) = ' + round2(val,5);
+			}
+			else {
+				val = Math.cos(input2);
+					for (k=1; k<10; k++) {
+						var input3 = k*Math.PI/input2;
+						var input4 = Math.abs(parseInt(input3) - input3);
+							if (k==1) {
+								var m = "";
+							}
+							else {
+								m = k;
+							}
+						if (input4 < 1.e-9 && input2 > 0) {
+							calculator.myhelp.value = 'cos ' + m + '&pi;/' + input3 + ' = ' + round2(val,5);
+							break;
+						}
+						else if (input4 < 1.e-9) {
+							calculator.myhelp.value = 'cos (-' + m + '&pi;/' + (-input3) + ') = ' + round2(val,5);
+							break;
+						}
+						else {
+							calculator.myhelp.value = 'cos (' + round2(input2,5) + ' рад) = ' + round2(val,5);
+						}
+					}
+			}
+			calculator.input.value = roundResult(val);
+			return true
+		}
+		
+		function tanFun(){
+			var input1 = calculator.input.value;
+			if (input1=='?') {
+				return calculator.input.value = 'Тригонометрический тангенс. Для вычисления сложных выражений используйте формат ввода tg(выражение)'
+			}
+			var input2 = eval(input1);
+			if (calculator.input1[0].checked){
+				val = Math.tan(input2 * Math.PI / 180);
+				calculator.myhelp.value = 'tg (' + round2(input2,6) + '°) = ' + round2(val,6);
+			}
+			else{
+				val = Math.tan(input2);
+					for (k=1; k<10; k++) {
+						var input3 = k*Math.PI/input2;
+						var input4 = Math.abs(parseInt(input3) - input3);
+							if (k==1) {
+								var m = "";
+							}
+							else {
+								m = k;
+							}
+						if (input4 < 1.e-9 && input2 > 0) {
+							calculator.myhelp.value = 'tg ' + m + '&pi;/' + round2(input3,3) + ' = ' + round2(val,5);
+							break;
+						}
+						else if (input4 < 1.e-9) {
+							calculator.myhelp.value = 'tg (-' + m + '&pi;/' + (-round2(input3,3)) + ') = ' + round2(val,5);
+							break;
+						}
+						else {
+							calculator.myhelp.value = 'tg (' + round2(input2,5) + ' рад) = ' + round2(val,5);
+						}
+					}
+			}
+			calculator.input.value = roundResult(val);
+			return true
+		}
+		
+		function asinFun(){
+			var input1 = calculator.input.value;
+			if (input1=='?') {
+				return calculator.input.value = 'Тригонометрическиий арксинус. Для вычисления сложных выражений используйте формат ввода arcsin(выражение)'
+			}
+			var input2 = eval(input1);
+			if (calculator.input1[0].checked){
+				var val = Math.asin(input2) * 180 / Math.PI;
+				calculator.myhelp.value = 'arcsin (' + round2(input2,5) + ') = ' + round2(val,5) + '°';
+			}
+			else{
+				var tmp = Math.asin(input2);
+				val = Math.asin(input2);
+					for (k=1; k<10; k++) {
+						var input3 = k*tmp/Math.PI;
+						var input4 = Math.abs(parseInt(input3) - input3);
+						if (input4 < 1.e-9) {
+							if (round2(input3,3) == 1) {
+								var inp = "";
+							}
+							else if (round2(input3,3) == -1) {
+								var inp = "-";
+							}
+							else {
+								inp = round2(input3,3);
+							}
+							calculator.myhelp.value = 'arcsin (' + round2(input2,6) + ') = ' + inp + '&pi;/' + k;
+							break;
+						}
+						else {
+							calculator.myhelp.value = 'arcsin (' + round2(input2,5) + ') = ' + round2(val,5) + ' рад';
+						}
+					}
+			}
+			calculator.input.value = round2(val,9);
+			return true
+		}
+		
+		function acosFun(){
+			var input1 = calculator.input.value;
+			if (input1=='?') {
+				return calculator.input.value = 'Тригонометрическиий арккосинус. Для вычисления сложных выражений используйте формат ввода arccos(выражение)'
+			}
+			var input2 = eval(input1);
+			if (calculator.input1[0].checked){
+				var val = Math.acos(input2) * 180 / Math.PI;
+				calculator.myhelp.value = 'arccos (' + round2(input2,5) + ') = ' + round2(val,5) + '°';
+			}
+			else{
+				var tmp = Math.acos(input2);
+				val = Math.acos(input2);
+					for (k=1; k<10; k++) {
+						var input3 = k*tmp/Math.PI;
+						var input4 = Math.abs(parseInt(input3) - input3);
+						if (input4 < 1.e-9) {
+							if (Math.abs(input3-1) < 1.e-4) {
+								calculator.myhelp.value = 'arccos (' + round2(input2,5) + ') = ' + '&pi;/' + k;
+							}
+						else {
+							calculator.myhelp.value = 'arccos (' + round2(input2,5) + ') = ' + round2(input3,5) + '&pi;/' + k;
+						}
+							break;
+						}
+						else {
+							calculator.myhelp.value = 'arccos (' + round2(input2,6) + ') = ' + round2(val,5) + ' рад';
+						}
+					}
+			}
+				calculator.input.value = roundResult(val);
+			return true
+		}
+		
+		function atanFun(){
+			var input1 = calculator.input.value;
+			if (input1=='?') {
+				return calculator.input.value = 'Тригонометрическиий арктангенс. Для вычисления сложных выражений используйте формат ввода arctg(выражение)'
+			}
+			var input2 = eval(input1);
+			if (calculator.input1[0].checked){
+				var val = Math.atan(input2) * 180 / Math.PI;
+				calculator.myhelp.value = 'arctg (' + round2(input2,5) + ') = ' + round2(val,5) + '°';
+			}
+			else{
+				val = Math.atan(input2);
+				calculator.myhelp.value = 'arctg (' + round2(input2,5) + ') = ' + round2(val,5) + ' рад';
+			}
+				calculator.input.value = roundResult(val);
+			return true
+		}
+		
+		function erfcc(){
+			var input1 = calculator.input.value;
+			if (input1=='?') {
+				return calculator.input.value = 'Функция Erfc, представляющая собой интеграл от exp(-x^2) по промежутку (x, +бесконечность) с нормирующим на единицу коэффициентом. Для вычисления сложных выражений используйте формат ввода erfc(выражение).'
+			}
+			var input2 = eval(input1);
+			var val = roundResult(erfc(input2));
+			calculator.input.value = val;
+			calculator.myhelp.value = '(2&pi;)<sup> - 1/2</sup> &int;exp(- x<sup>2</sup>)dx&nbsp; (от ' + round2(input2,5) + ' до +&infin;) = ' + round2(val,5);
+			return true
+		}
+		
+		function erff(){
+			var input1 = calculator.input.value;
+			if (input1=='?') {
+				return calculator.input.value = 'Функция Erf, представляющая собой интеграл от exp(-x^2) по промежутку (0, x) с нормирующим на единицу коэффициентом. Для вычисления сложных выражений используйте формат ввода erf(выражение).'
+			}
+			var input2 = eval(input1);
+			var val = roundResult(1-erfc(input2));
+			calculator.input.value = val;
+			calculator.myhelp.value = '(2&pi;)<sup> - 1/2</sup> &int;exp(- x<sup>2</sup>)dx&nbsp; (от 0 до ' + round2(input2,5) + ') = ' + round2(val,5);
+			return true
+		}
+		
+		//  End -->
+		</script>
+		<script language="JavaScript">
+		<!-- Begin
+		function numerDenom(arg) {
+			arg =eval(arg);
+			for (i=1; i<100; i++) {
+				var tmp = arg*i;
+				var val1 = Math.abs(parseInt(tmp) - tmp);
+					if (val1 < 1.e-9) {
+						var numer = tmp;
+						var denom = i;
+						break;
+					}
+			}
+			result = new Array;
+			result[0] = numer;
+			result[1] = denom;
+			return result;
+		}
+		//  End -->
+		</script>
+		
+		<script language="JavaScript">
+		function toNewWin(mes,config1) {
+		config='toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=yes,';
+		config += config1;
+		pop = window.open ("","pop",config);
+		pop.document.write("<body onBlur=\"window.close()\">");
+		pop.document.write(mes);
+		pop.document.write("</body>");
+		pop.document.close();
+		}
+		</script>
+		
+		<script language="JavaScript">
+		<!--
+		function toMemory (){
+			if (calculator.input.value=='?') {
+				return calculator.input.value = 'Запись в память содержимого рабочего окна'
+			}
+				calculator.mem.value = eval(calculator.input.value);
+				calculator.myhelp.value = "Копирование в Память";
+		}
+		
+		function addToMemory (){
+			if (calculator.input.value=='?') {
+				return calculator.input.value = 'Прибавление числа в рабочем окне к числу в памяти'
+			}
+			var val1 = -eval(calculator.input.value);
+				calculator.mem.value = calculator.mem.value - val1;
+				calculator.myhelp.value = "Накопление суммы в Памяти";
+		}
+		
+		function noMemory (){
+			if (calculator.input.value=='?') {
+				return calculator.input.value = 'Обнуление ячейки памяти'
+			}
+				calculator.mem.value = '';
+				calculator.myhelp.value = "Очистка Памяти";
+		}
+		
+		//  End -->
+		</script>
+		
+		</head>
+		<body bgcolor="#CCCCCC" marginheight="0" topmargin="0" leftmargin="0" class="main2">
+			<form name="calculator">
+			<table cellspacing="0" cellpadding="0" border="1" bgcolor="#FBF8F0">
+				<tbody><tr>
+				<td colspan="4">
+			<table cellspacing="0" cellpadding="0" border="1" bgcolor="#FBF8F0">
+				<tbody><tr>
+				<td colspan="4">
+			<table width="100%" bgcolor="#0421AA">
+					<tbody><tr>
+					<td><span class="style1">
+						<strong>Калькулятор для расчета вероятностей событий</strong>
+					</span></td>
+					<td>&nbsp;
+						
+					</td>
+					</tr>
+			</tbody></table>
+				</td>
+				</tr>
+				<tr>
+				<td colspan="4">
+			<table bgcolor="#FBF8F0">
+				<tbody><tr>
+				<td align="center" colspan="4">
+					<textarea cols="70" rows="2" style="color:#006699" type="text" name="input" size="50" title="Окно ввода/вывода (дисплей). Для доступа ко всем строкам дисплея используйте прокрутку содержимого окна."></textarea>
+				</td>
+				</tr>
+			</tbody></table>
+				</td>
+				</tr>
+				<tr>
+				<td width="24%">
+			<table width="100%" bgcolor="#FFF9F9" class="main2">
+				<tbody><tr>
+				<td align="left">
+					<input name="input1" type="radio" title="Переключатель с радиан на градусы (положение переключателя влияет только на вывод результатов рассчета значений тригонометрических и обратных тригонометрических функций)">Град&nbsp;/&nbsp;Рад
+					<input name="input1" type="radio" checked="" title="Переключатель с градусов на радианы (положение переключателя влияет только на вывод результатов рассчета значений тригонометрических и обратных тригонометрических функций)">
+				</td>
+				</tr>
+				<tr>
+				<td align="center">
+					<button onclick="sinFun()" title="Тригонометрический синус. Для вычисления сложных выражений используйте формат ввода sin(выражение)">&nbsp;&nbsp;<span class="trigButton">sin</span>&nbsp;</button>&nbsp; 
+					<button onclick="asinFun()" title="Тригонометрическиий арксинус. Для вычисления сложных выражений используйте формат ввода arcsin(выражение)"><span class="trigButton">arcsin</span>&nbsp;</button>
+				</td>
+				</tr>
+				<tr>
+					<td align="center">
+					<button onclick="cosFun()" title="Тригонометрическиий косинус. Для вычисления сложных выражений используйте формат ввода cos(выражение)">&nbsp;<span class="trigButton">cos</span>&nbsp;</button>
+					<button onclick="acosFun()" title="Тригонометрическиий арккосинус. Для вычисления сложных выражений используйте формат ввода arccos(выражение)">&nbsp;<span class="trigButton">arccos</span></button>
+				</td>
+				</tr>
+				<tr>
+				<td align="center" width="22%">
+					<button onclick="tanFun()" title="Тригонометрическиий тангенс. Для вычисления сложных выражений используйте формат ввода tg(выражение)">&nbsp;<span class="trigButton"> tg </span>&nbsp;</button>&nbsp;
+					<button onclick="atanFun()" title="Тригонометрическиий арктангенс. Для вычисления сложных выражений используйте формат ввода arctg(выражение)">&nbsp;<span class="trigButton">arctg</span>&nbsp;</button>
+				</td>
+				</tr>
+			</tbody></table>
+				</td>
+				<td width="23%">
+			<table width="100%" bgcolor="#FDF9EC" class="funcButton">
+				<tbody><tr>
+				<td>
+					<button onclick="expFun()" title="Возведение числа e в степень x, где x - число на дисплее. Для вычисления сложных выражений используйте формат ввода exp(выражение)">&nbsp;<span class="funcButton">e<sup>x</sup></span>&nbsp;</button>
+					<button onclick="loge()" title="Вычисление натурального логарифма числа, представленного на дисплее. Для вычисления сложных выражений используйте формат ввода ln(выражение)">&nbsp;<span class="funcButton">ln</span>&nbsp;</button>
+					<button onclick="log10b()" title="Вычисление десятичного логарифма числа, представленного на дисплее. Для вычисления сложных выражений используйте формат ввода lg(выражение)">&nbsp;<span class="funcButton"> lg </span>&nbsp;</button>
+				</td>
+				</tr>
+				<tr>
+				<td align="center">
+					<button onclick="square()" title="Возведение в квадрат числа, представленного на дисплее">&nbsp;<span class="funcButton">x<sup>2</sup></span>&nbsp;</button>
+					<button onclick="cube()" title="Возведение в куб числа, представленного на дисплее">&nbsp;<span class="funcButton">x<sup>3</sup></span>&nbsp; </button>
+					<button onclick="powerOfNum()" title="Возведение числа x, представленного на дисплее, в степень y. Для вычисления сложных выражений используйте формат ввода pow(основание,степень).">&nbsp;<span class="funcButton">x<sup>y</sup></span>&nbsp;</button>
+				</td>
+				</tr>
+				<tr>
+				<td align="center">
+					<button onclick="sqrtOfNum()" title="Извлечение квадратного корня из числа, представленного на дисплее. Для вычисления сложных выражений используйте формат ввода sqrt(выражение).">&nbsp;<span class="funcButton">√‾</span>&nbsp; </button>
+					<button onclick="reciprocalNum()" title="Вычисление числа, обратного представленному на дисплее">&nbsp;<span class="funcButton">1/x</span>&nbsp;</button>
+					<button onclick="factorialOfNum()" title="Вычисление факториала натурального числа, представленного на дисплее. Для вычисления сложных выражений используйте формат ввода factorial(выражение).">&nbsp;<span class="funcButton">n&nbsp;!</span>&nbsp; </button>
+				</td>
+				</tr>
+				<tr>
+				<td align="center">
+					<button onclick="erfcc()" title="Функция Erfc: Интеграл от exp(-x^2) по промежутку [x, +бесконечность] с нормирующим на единицу коэффициентом. Для вычисления сложных выражений используйте формат ввода erfc(выражение).">&nbsp;<span class="trigButton">Erfc</span>&nbsp;</button>&nbsp;
+					<button onclick="erff()" title="Функция Erf: Интеграл от exp(-x^2) по промежутку [0, x] с нормирующим на единицу коэффициентом. Для вычисления сложных выражений используйте формат ввода erf(выражение).">&nbsp;<span class="trigButton">Erf</span>&nbsp;</button>
+				</td>
+				</tr>
+			</tbody></table>
+				</td>
+				<td>
+			<table width="100%" bgcolor="#FDFEF1">
+				<tbody><tr>
+				<td align="center">
+					<input type="button" value=" 1 " class="numButton" onclick="num(1)" title="Цифра 1"> 
+					<input type="button" value=" 2 " class="numButton" onclick="num(2)" title="Цифра 2"> 
+					<input type="button" value=" 3 " class="numButton" onclick="num(3)" title="Цифра 3"> 
+					<input type="button" value=" ( " class="commandButton" onclick="leftbracket()" title="Левая (открывающая) скобка">
+				</td>
+				</tr>
+				<tr>
+				<td align="center">
+					<input type="button" value=" 4 " class="numButton" onclick="num(4)" title="Цифра 4">
+					<input type="button" value=" 5 " class="numButton" onclick="num(5)" title="Цифра 5">
+					<input type="button" value=" 6 " class="numButton" onclick="num(6)" title="Цифра 6">
+					<input type="button" value=" ) " class="commandButton" onclick="rightbracket()" title="Правая (закрывающая) скобка">
+				</td>
+				</tr>
+				<tr>
+				<td align="center">
+					<input type="button" value=" 7 " class="numButton" onclick="num(7)" title="Цифра 7">
+					<input type="button" value=" 8 " class="numButton" onclick="num(8)" title="Цифра 8">
+					<input type="button" value=" 9 " class="numButton" onclick="num(9)" title="Цифра 9">
+					<input type="button" value="+/ -" onclick="plus_minus()" class="commandButton" title="Изменение знака">
+				</td>
+				</tr>
+				<tr>
+				<td align="center">
+					<input type="button" value=" 0 " class="numButton" onclick="num(0)" title="Цифра 0">
+					<input type="button" value=" . " class="commandButton" onclick="point()" title="Десятичная точка">
+					<input type="button" value="pi" class="numButton" onclick="PI()" title="Число пи, равное 3.1415926...">
+					<input type="button" value=" e " class="numButton" onclick="E()" title="Число е, равное 2.718281828459...">
+				</td>
+				</tr>
+			</tbody></table>
+				</td>
+				<td width="20%">
+			<table width="100%" bgcolor="#F5FFF2">
+				<tbody><tr>
+				<td>
+					<input type="button" value="   =   " onclick="Evaluate()" class="clearButton" title="Символ завершения команды"> 
+				</td>
+				</tr>
+				<tr>
+				<td>
+					<input type="button" value=" Сброс " align="right" onclick="document.calculator.input.value = ''; " class="clearButton" title="Очистка содержимого дисплея">&nbsp;
+				</td>
+				</tr>
+				<tr>
+				<td align="center" colspan="2">
+					<input type="button" value="  +  " onclick="plus()" class="commandButton" title="Знак сложения">
+					<input type="button" value="  -   " onclick="minus()" class="commandButton" title="Знак вычитания">
+				</td>
+				</tr>
+				<tr>
+				<td align="center">
+					<input type="button" value="  *   " onclick="mult()" class="commandButton" title="Знак умножения">
+					<input type="button" value="  /   " onclick="div()" class="commandButton" title="Знак деления">
+				</td>
+				</tr>
+			</tbody></table>
+				</td>
+				</tr>
+				<tr>
+				<td colspan="4">
+			<table width="100%" bgcolor="#F2FCFD" class="numButton">
+				<tbody><tr>
+				<td>
+					<input style="color:#02129D" type="button" name="mem" onclick="calculator.input.value += calculator.mem.value" value="Память" title="Окно для отображения содержимого памяти. При нажатии на кнопку памяти ее содержимое копируется в рабочее окно.">&nbsp;&nbsp;
+				</td>
+				<td width="30%">
+					<input type="button" value=" П  " class="commandButton" onclick="toMemory()" title="Запись в память содержимого рабочего окна. Для изменения окна используемой памяти нажмите на переключатель памяти">
+					<input type="button" value="П+ " class="commandButton" onclick="addToMemory()" title="Прибавление числа в рабочем окне к числу в памяти. Для изменения окна используемой памяти нажмите на переключатель памяти">
+					<input type="button" value="ПО " class="commandButton" onclick="noMemory()" title="Очистка содержимого памяти. Для изменения окна используемой памяти нажмите на переключатель памяти">
+				</td>
+				</tr>
+			</tbody></table>
+				</td>
+				</tr>
+				<tr>
+				<td colspan="4">
+			<table width="100%" bgcolor="#FFF9FF">
+				<tbody><tr>
+				<td>
+					p&nbsp;=&nbsp;<input style="background-color:#F9F9F9" type="text" name="prob" size="1" value="0." title="Окно для ввода вероятности успеха в одном испытании">&nbsp;
+					m&nbsp;=&nbsp;<input style="background-color:#F9F9F9" type="text" name="luck" size="1" value="0" onfocus="select()" title="Окно для ввода числа успехов">&nbsp; 
+					n&nbsp;=&nbsp;<input style="background-color:#F9F9F9" type="text" name="trials" size="1" value="0" onfocus="select()" title="Окно для ввода числа испытаний">&nbsp;
+					<button type="button" onclick="input.value=allDist(prob.value,luck.value,trials.value)" title="Команда на вывод вероятностей успехов">&nbsp;&nbsp;<span class="trigButton">Найти</span>&nbsp;</button>
+				</td>
+				</tr>
+			</tbody></table>
+				</td>
+				</tr>
+				<tr>
+				<td width="100%" align="center" colspan="4">
+			<table width="100%" bgcolor="#FBF8F0">
+				<tbody><tr>
+				<td background="">
+					<button name="myhelp" type="button" value="" class="comment"><span class="trigButton">&nbsp;</span></button>
+				</td>
+				</tr>
+			</tbody></table>
+				</td>
+				</tr>
+			  </tbody></table>
+			</td></tr></tbody></table>
+			</form>
+        </div>
+    </div>
+
+    <script>
+        function calculateProbability() {
+            var numerator = document.getElementById('numerator').value;
+            var denominator = document.getElementById('denominator').value;
+            var result = numerator / denominator;
+            document.getElementById('result').innerHTML = "Probability: " + result;
+        }
+    </script>
+    </center>
+</body>
+</html>
